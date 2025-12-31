@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ny">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isaac Video Share</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database-compat.js"></script>
+</head>
+<body>
+  <!-- Top navigation (visible only when logged in) -->
+  <nav id="appNav" class="hidden">
+    <div class="nav-bar">
+      <button id="navHome" class="tab active">HOME</button>
+      <button id="navVideos" class="tab">VIDEO</button>
+    </div>
+  </nav>
+
+  <!-- Auth (centered forms) -->
+  <section id="authSection">
+    <form id="loginForm" class="form visible" novalidate>
+      <h2>Kulowa</h2>
+      <div class="row">
+        <label for="loginEmail">Imelo</label>
+        <input type="email" id="loginEmail" required placeholder="imelo@example.com">
+      </div>
+      <div class="row">
+        <label for="loginPassword">Mawu achinsinsi</label>
+        <input type="password" id="loginPassword" required minlength="6" placeholder="••••••••">
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn">Lowani</button>
+      </div>
+      <p class="switch">Mulibe akaunti? <a href="#" id="toRegister">Lembani pano</a></p>
+      <p id="loginError" class="error"></p>
+    </form>
+
+    <form id="registerForm" class="form" novalidate>
+      <h2>Kulembetsa</h2>
+      <div class="row">
+        <label for="fullName">Dzina lonse</label>
+        <input type="text" id="fullName" required placeholder="Mwachitsanzo: Isaac Banda">
+      </div>
+      <div class="row">
+        <label for="registerEmail">Imelo</label>
+        <input type="email" id="registerEmail" required placeholder="imelo@example.com">
+      </div>
+      <div class="row">
+        <label for="dob">Tsiku lobadwa</label>
+        <input type="date" id="dob" required>
+      </div>
+      <div class="row">
+        <label for="registerPassword">Mawu achinsinsi</label>
+        <input type="password" id="registerPassword" required minlength="6" placeholder="Osachepera 6">
+      </div>
+      <div class="row checkbox-row">
+        <input type="checkbox" id="confirmSite">
+        <label for="confirmSite">Mwasimikiza kulowa pa website ino?</label>
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn">Lembani akaunti</button>
+      </div>
+      <p class="switch">Mulipo kale? <a href="#" id="toLogin">Lowani pano</a></p>
+      <p id="registerError" class="error"></p>
+    </form>
+  </section>
+
+  <!-- Home (instructions + logout) -->
+  <section id="homeSection" class="hidden">
+    <div class="card">
+      <h2>Malangizo a Site</h2>
+      <ul class="tips">
+        <li><strong>Kuyamba:</strong> Dinani “VIDEO” mmwamba kuti muwone player ndi ma video grid.</li>
+        <li><strong>Like:</strong> Dinani batani la Like, chiwerengero chimawonjezeka kwa aliyense.</li>
+        <li><strong>Download:</strong> Dinani Download kuti mutsitse video nthawi yomweyo.</li>
+        <li><strong>Full screen:</strong> Dinani icon ya resize pansi kumanja pa player.</li>
+      </ul>
+      <div class="home-actions">
+        <button id="logoutBtn" class="btn danger">Tulukani</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video (header = player only) -->
+  <section id="videoSection" class="hidden">
+    <div class="player-wrap">
+      <video id="mainPlayer" controls preload="metadata"></video>
+      <button id="fullscreenBtn" class="fs-btn" title="Full screen">
+        <i class="fi fi-sr-expand"></i>
+      </button>
+    </div>
+
+    <div class="player-actions">
+      <button id="likeBtn" class="action-btn" title="Like">
+        <i class="fi fi-sr-thumbs-up"></i>
+        <span id="likeCount" class="count">0</span>
+      </button>
+      <button id="downloadBtn" class="action-btn" title="Download">
+        <i class="fi fi-sr-download"></i>
+        <span id="downloadCount" class="count">0</span>
+      </button>
+      <button id="shareBtn" class="action-btn" title="Share">
+        <i class="fi fi-sr-share"></i>
+        <span id="shareCount" class="count">0</span>
+      </button>
+    </div>
+
+    <div id="shareSection" class="share-section hidden">
+      <h3>Share to:</h3>
+      <div class="share-actions">
+        <button id="shareWhatsapp" class="btn small">Whatsapp</button>
+        <button id="shareFacebook" class="btn small">Facebook</button>
+        <button id="copyLink" class="btn small">Copy link</button>
+        <button id="copyEmbed" class="btn small">Copy embed</button>
+      </div>
+    </div>
+
+    <section class="grid-section">
+      <h2>Mndandanda wa ma Video</h2>
+      <div id="videoGrid" class="video-grid"></div>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
