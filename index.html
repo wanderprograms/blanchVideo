@@ -18,6 +18,10 @@
   <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database-compat.js"></script>
 </head>
 <body>
+  <div id="splash">    
+      <img src="thumbs/myvideologo.jpg" alt="Logo" id="splash-logo">    
+   </div>
+  
   <!-- Top navigation (visible only when logged in) -->
   <nav id="appNav" class="hidden">
     <div class="nav-bar">
@@ -36,12 +40,12 @@
       </div>
       <div class="row">
         <label for="loginPassword">Mawu achinsinsi</label>
-        <input type="password" id="loginPassword" required minlength="6" placeholder="••••••••">
+        <input type="password" id="loginPassword" required minlength="8" placeholder="••••••••">
       </div>
       <div class="actions">
         <button type="submit" class="btn">Lowani</button>
       </div>
-      <p class="switch">Mulibe akaunti? <a href="#" id="toRegister">Lembani pano</a></p>
+      <p class="switch">Mulibe akaunti? <a href="#" id="toRegister">Lembanitsani apa</a></p>
       <p id="loginError" class="error"></p>
     </form>
 
@@ -49,7 +53,7 @@
       <h2>Kulembetsa</h2>
       <div class="row">
         <label for="fullName">Dzina lonse</label>
-        <input type="text" id="fullName" required placeholder="Mwachitsanzo: Isaac Banda">
+        <input type="text" id="fullName" required placeholder="Mwachitsanzo: Isaac Wonderford">
       </div>
       <div class="row">
         <label for="registerEmail">Imelo</label>
@@ -61,16 +65,16 @@
       </div>
       <div class="row">
         <label for="registerPassword">Mawu achinsinsi</label>
-        <input type="password" id="registerPassword" required minlength="6" placeholder="Osachepera 6">
+        <input type="password" id="registerPassword" required minlength="8" placeholder="Osachepera 8 a mix">
       </div>
       <div class="row checkbox-row">
         <input type="checkbox" id="confirmSite">
         <label for="confirmSite">Mwasimikiza kulowa pa website ino?</label>
       </div>
       <div class="actions">
-        <button type="submit" class="btn">Lembani akaunti</button>
+        <button type="submit" class="btn">Create acount</button>
       </div>
-      <p class="switch">Mulipo kale? <a href="#" id="toLogin">Lowani pano</a></p>
+      <p class="switch">Ngati munalembetsa kale <a href="#" id="toLogin">Lowani pano</a></p>
       <p id="registerError" class="error"></p>
     </form>
   </section>
@@ -80,10 +84,11 @@
     <div class="card">
       <h2>Malangizo a Site</h2>
       <ul class="tips">
-        <li><strong>Kuyamba:</strong> Dinani “VIDEO” mmwamba kuti muwone player ndi ma video grid.</li>
-        <li><strong>Like:</strong> Dinani batani la Like, chiwerengero chimawonjezeka kwa aliyense.</li>
-        <li><strong>Download:</strong> Dinani Download kuti mutsitse video nthawi yomweyo.</li>
-        <li><strong>Full screen:</strong> Dinani icon ya resize pansi kumanja pa player.</li>
+        <li><strong>Kuyamba:</strong> mukadina video izayamba ku player.</li>
+        <li><strong>Like:</strong> Dinani like button kuti tiziziwa anthu omwe amakonda app ino, kuti tiziponya ma video okusangalasani.</li>
+        <li><strong>Download:</strong> mutha kupanga download ma video pa app ino ndikusunga kuti muzitha kuonera ngakhale mutatuluka pa app ino.</li>
+        <li><strong>Full screen:</strong> Dinani icon ya resize [] pansi kumanja mu player kuti muonere video pa fuscreen.</li>
+        <li><strong>Ma video:</strong> pano timaponya ma video okonda aliyense ANA,AKULU okonda aliyense. ndiye inunso muzingosankhapo zomwe mungasangalare nazo.</li>
       </ul>
       <div class="home-actions">
         <button id="logoutBtn" class="btn danger">Tulukani</button>
