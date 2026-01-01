@@ -9,6 +9,34 @@ body {
   min-height: 100vh;
 }
 
+#splash {
+  position: fixed;
+  top: 0; left: 0;  
+  width: 100vw; height: 100vh;
+  background: #fff;       / imabisira chilichonse kwa masekondi 10 /
+  display: flex;  
+  z-index: 9999;          / pamwamba pa chilichonse /
+}
+
+#splash-logo {
+  position: absolute;
+  top: 35%; left: 40%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;   
+  animation: zoomInOut 10s ease-in-out forwards;
+}
+
+@keyframes zoomInOut {
+  0%   { transform: scale(1);   opacity: 0.2; }
+  25%  { transform: scale(1.2); opacity: 1; }
+  50%  { transform: scale(1);   opacity: 1; }
+  75%  { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1);   opacity: 0; }
+}
+
 /* Utility */
 .hidden { display: none !important; }
 .error { color: #ff6b6b; margin-top: 8px; }
