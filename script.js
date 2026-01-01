@@ -1,5 +1,10 @@
 // app.js
 document.addEventListener('DOMContentLoaded', () => {
+  const splash = document.getElementById('splash');
+
+  setTimeout(() => {
+    if (splash) splash.remove(); // splash imachotsedwa kwathunthu
+  }, 6000); // masekondi 10
   // Replace with your Firebase config
   firebase.initializeApp({
     apiKey: "AIzaSyBBZxCwywnv_ZVXYezOV8IKG6iKWK5sL10",
