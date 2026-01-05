@@ -73,7 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: "Black Nina", title: "Molalo", file: "Videos/video2.mp4", thumb: "thumbs/molalo.jpg" },
     { id: "commedy", title: "2063", file: "Videos/video4.mp4", thumb: "thumbs/thumb2.jpeg" },
     { id: "1", title: "Caxy_Ai_Mayo", file: "Videos/Caxy_Ai_Mayo.mp4", thumb: "thumbs/images.jpg" }, 
-    { id: "Lady Aika", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" }
+    { id: "2", title: "Waxy_Kay__Nsembe_ft_Kebeh", file: "Videos/Waxy_Kay__Nsembe_ft_Kebeh.mp4", thumb: "thumbs/waxy2.jpg" },
+    { id: "3", title: "Mazombwe_Kids_ft_Waxy_Kay_-_Twinkle_Twinkle", file: "Videos/Mazombwe_Kids_ft_Waxy_Kay_-_Twinkle_Twinkle.mp4", thumb: "thumbs/mazobwe.jpg" },
+    { id: "4", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "5", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "6", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "7", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "8", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "9", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "10", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "11", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "12", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "13", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" },
+    { id: "14", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" }
   ];
 
   // Helpers
