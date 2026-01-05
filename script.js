@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: "commedy", title: "A CHAKWELA ASANALOWE M'BOMA", file: "Videos/video1.mp4", thumb: "thumbs/thumb1.jpeg" },
     { id: "Black Nina", title: "Molalo", file: "Videos/video2.mp4", thumb: "thumbs/molalo.jpg" },
     { id: "commedy", title: "2063", file: "Videos/video4.mp4", thumb: "thumbs/thumb2.jpeg" },
-    { id: "Manizo", title: "Chilungamo", file: "Videos/video3.mp4", thumb: "thumbs/manizo.jpg" }, 
+    { id: "1", title: "Caxy_Ai_Mayo", file: "Videos/Caxy_Ai_Mayo.mp4", thumb: "thumbs/images.jpg" }, 
     { id: "Lady Aika", title: "Busy", file: "Videos/video5.mp4", thumb: "thumbs/aika.jpg" }
   ];
 
